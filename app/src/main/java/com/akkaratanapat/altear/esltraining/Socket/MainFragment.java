@@ -24,6 +24,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.akkaratanapat.altear.esltraining.R;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -34,7 +36,6 @@ import java.util.List;
 import io.socket.client.IO;
 import io.socket.client.Socket;
 import io.socket.emitter.Emitter;
-
 
 /**
  * A chat fragment containing messages view and input form.

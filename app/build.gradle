@@ -24,4 +24,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:21.0.+'
     compile 'com.android.support:recyclerview-v7:21.0.+'
     compile 'io.socket:socket.io-client:0.6.2'
+    compile 'com.loopj.android:android-async-http:1.4.9'
+    compile project(':volley')
 }

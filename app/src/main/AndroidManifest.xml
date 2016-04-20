@@ -17,20 +17,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name="Socket.MainActivity"
-            android:label="@string/app_name" >
+            android:name=".Socket.MainActivity"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
-            android:name="Socket.LoginActivity"
+            android:name=".Socket.LoginActivity"
             android:label="@string/title_activity_login"
             android:theme="@style/Theme.AppCompat"
-            android:windowSoftInputMode="adjustResize|stateVisible" >
-        </activity>
+            android:windowSoftInputMode="adjustResize|stateVisible" />
+        <activity android:name=".Http.AsynchronousHttpClientActivity" />
+        <activity android:name=".Http.VolleyActivity"></activity>
     </application>
 
 </manifest>
