@@ -27,7 +27,7 @@ public class VolleyActivity extends ActionBarActivity {
     }
 
     public void responseJsonFromWeb(){
-        String url = "url";
+        String url = "http://localhost:8888";
 
         JsonObjectRequest jsObjRequest = new JsonObjectRequest
                 (Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
@@ -49,7 +49,11 @@ public class VolleyActivity extends ActionBarActivity {
                         }
                         //JsonArray
                         try{
-                            JSONArray resultArrayJSON = response.getJSONArray("resultArray");
+                            JSONArray resultArrayJSON = response.getJSONArray("user");
+                            JSONObject resultObject = resultArrayJSON.getJSONObject(0);
+                            String user = resultObject.getString("user");
+                            String age = resultObject.getString("age");
+                            Toast.makeText(getBaseContext(),user +" : " + age,Toast.LENGTH_SHORT).show();
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }

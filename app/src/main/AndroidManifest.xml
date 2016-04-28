@@ -30,7 +30,11 @@
             android:theme="@style/Theme.AppCompat"
             android:windowSoftInputMode="adjustResize|stateVisible" />
         <activity android:name=".Http.AsynchronousHttpClientActivity" />
-        <activity android:name=".Http.VolleyActivity"></activity>
+        <activity android:name=".Http.VolleyActivity" />
+        <activity android:name=".Http.HTTPActivity" />
+        <activity android:name=".SimpleComponent.SimpleActivity" />
+        <activity android:name=".SimpleComponent.ListviewActivity" />
+        <activity android:name=".SimpleComponent.CustombuttonActivity"></activity>
     </application>
 
 </manifest>

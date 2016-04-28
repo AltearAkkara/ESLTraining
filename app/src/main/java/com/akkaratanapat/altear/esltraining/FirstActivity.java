@@ -6,43 +6,48 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.akkaratanapat.altear.esltraining.SimpleComponent.SimpleActivity;
 import com.akkaratanapat.altear.esltraining.Socket.MainActivity;
+
 
 public class FirstActivity extends Activity {
 
-    Button simplButton,httpButton,socketButton;
+    Button Simple,HTTP,Socket;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
-        setCustomComponent();
+        setCustom();
     }
 
-    public void setCustomComponent(){
-        simplButton = (Button)findViewById(R.id.button);
-        httpButton = (Button)findViewById(R.id.button2);
-        socketButton = (Button)findViewById(R.id.button3);
+    public void setCustom(){
 
-        simplButton.setOnClickListener(new View.OnClickListener() {
+        Simple = (Button) findViewById(R.id.button);
+        HTTP = (Button) findViewById(R.id.button2);
+        Socket = (Button) findViewById(R.id.button3);
+
+        Simple.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(FirstActivity.this, SimpleActivity.class);
+                startActivity(i);
             }
         });
 
-        httpButton.setOnClickListener(new View.OnClickListener() {
+//        HTTP.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(FirstActivity.this, VolleyActivity.class);
+//                startActivity(i);
+//            }
+//        });
+
+        Socket.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-            }
-        });
-
-        socketButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(FirstActivity.this, MainActivity.class);
-                startActivity(intent);
+                Intent i = new Intent(FirstActivity.this, MainActivity.class);
+                startActivity(i);
             }
         });
     }
